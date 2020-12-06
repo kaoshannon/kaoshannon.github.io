@@ -13,7 +13,7 @@
 /* Style the body */
 body {
   font-family: Proxima Nova, monospace;
-  margin: 5;
+  margin: 10;
 }
 
 /* Header/logo Title */
@@ -33,6 +33,7 @@ body {
 .navbar {
   overflow: hidden;
   background-color: #FFF;
+  padding: 0px 30px;
 }
 
 /* Style the navigation bar links */
