@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Shannon Kao</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="styles.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Proxima Nova, monospace;
+  margin: 10;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 40px;
+  text-align: left;
+  background: #FFF;
+  color: white;
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+  font-size: 40px;
+}
+
+/* Style the top navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: #FFF;
+  padding: 0px 30px;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: outline;
+  color: black;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #100;
+  color: white;
+}
+
+/* Column container */
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  -ms-flex: 40%; /* IE10 */
+  flex: 40%;
+  text-align: center;
+  background-color: #FFF;
+  padding: 20px;
+}
+
+/* Main column */
+.main {   
+  -ms-flex: 60%; /* IE10 */
+  flex: 60%;
+  background-color: white;
+  padding: 20px;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #FFF;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+  <img src="https://static.wixstatic.com/media/4d641b_1ab7c7c9924c4a5e8790a22451871cd8~mv2.png/v1/fill/w_128,h_128,al_c,q_85,usm_0.66_1.00_0.01/Logo%20Nov%2027%202500.webp" style="height:50px;"
+  alt="SKAO Logo">
+</div>
+</div>
+
+<div class="navbar">
+  <a href="index.html">home</a>
+  <a href="devdes_portfolio.html">dev/des portfolio</a>
+  <a href="film_studio.html">film studio</a>
+  <a href="ar_lab.html">ar lab</a>
+  <a href="mailto:kaoshannon10@gmail.com" class="right">contact</a>
+  <a href="https://www.linkedin.com/in/kaoshannon"class="right">connect</a>
+</div>
+
+<!--videos-->
+<div class="row">
+  <div class="side">
+    <div class="main">
+    <iframe width="980" height="551.25" src="https://www.youtube.com/embed/NSXi4GSD0c0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+    <br> 
+    <br> 
+    <iframe width="672" height="400" src="https://www.youtube.com/embed/8QmE59LZ-7o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="308" height="460" src="https://www.youtube.com/embed/Jucmy5LFsuQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <br> 
+    <br> 
+    <iframe width="300" height="560" src="https://www.youtube.com/embed/QjwByhjzCz4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="680" height="400" src="https://www.youtube.com/embed/XWoQZRBZtcw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+</div>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<div class="footer">
+  <p class="love">Built with ❤︎ </p>
+  <p>2020 by Shannon Kao</p>
+</div>
+
+</body>
+</html>
