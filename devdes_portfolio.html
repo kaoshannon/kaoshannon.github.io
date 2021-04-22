@@ -5,12 +5,71 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" href="styles.css" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
 <style>
 * {
   box-sizing: border-box;
 }
 
-/* Style the body */
+* {box-sizing:border-box}
+
+/* SLIDE */
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Five columns side by side */
+.column {
+  float: left;
+  width: 20%;
+}
+
+/* Two columns side by side */
+.twocolumn {
+  float: left;
+  width: 50%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.9;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+
+
+
+/* BODY */
 body {
   font-family: Proxima Nova, monospace;
   margin: 10;
@@ -91,7 +150,7 @@ body {
 }
 
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 400px) {
   .row {   
     flex-direction: column;
   }
@@ -109,6 +168,7 @@ body {
   .vspace {
      margin-bottom: 3cm;
   }
+
 </style>
 
 
@@ -132,29 +192,62 @@ body {
   <a href="https://www.linkedin.com/in/kaoshannon"class="right">connect</a>
 </div>
 
+<br> 
+<br> 
+<br>
 
 <div class="row">
-    <div class="side">
-      <br>
-      <br>
-      <br>
-      <!-- <img src="https://static.wixstatic.com/media/4d641b_3ab1051b61e24efd806f9f39f2b011e7~mv2.jpeg/v1/fill/w_280,h_280,fp_0.50_0.50,lg_1,q_90/4d641b_3ab1051b61e24efd806f9f39f2b011e7~mv2.webp" style="height:100px;"
-      alt="CanadaToGo Logo">
-      <br> -->
-      <img src="https://static.wixstatic.com/media/4d641b_2648949958bd400ea70d6b6ba1f05abd~mv2.png/v1/fill/w_1184,h_725,al_c,q_90,usm_0.66_1.00_0.01/4d641b_2648949958bd400ea70d6b6ba1f05abd~mv2.webp" style="width:450px;"
-      alt="Screenshot of CanadaToGo homepage">
-      <br>
-      <video width="450" controls=autoplay>
-        <source src="VanBCToGoDemo.mp4" type=video/mp4>
-      </video>
+  <div class="side">
+    <div class="column">
+      <img class="demo cursor" src="Splash Screen.png" style="width:100%" onclick="currentSlide(1)" alt="Splash">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Impact Dash.png" style="width:100%" onclick="currentSlide(2)" alt="Impact">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="QR code - redeem.png" style="width:100%" onclick="currentSlide(3)" alt="QR Redeem">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="QR code - scan success.png" style="width:100%" onclick="currentSlide(4)" alt="QR Success">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Settings.png" style="width:100%" onclick="currentSlide(5)" alt="Settings">
+    </div>
+  </div>
+</div>
 
-    </div> 
-
-
+</div>
   <div class="main">
-    <br>
-    <br>
-    <br>
+    <h2>BYO</h2>
+    <h4>March 2021 - present</h4>
+    <p>BYO is an app that encourages coffee and bubble tea drinkers to bring their own cup through a reward system. 
+      When users visit a participating cafe with a reuseable cup for their drink, they are provided a QR code unique to the cafe to scan and earn points. 
+      We plant a tree for every 5 cups you save, and you get to earn discounts with your points! 
+    </p>
+  
+    <h4>Explore:
+      <a
+      href="https://letsbyo.com/">BYO</a>
+    </h4>
+  </div>
+</div>
+
+<br> 
+<br> 
+<br>
+
+<div class="row">
+  <div class="side">
+    <div class="twocolumn">
+      <img class="demo cursor" src="https://static.wixstatic.com/media/4d641b_2648949958bd400ea70d6b6ba1f05abd~mv2.png/v1/fill/w_1184,h_725,al_c,q_90,usm_0.66_1.00_0.01/4d641b_2648949958bd400ea70d6b6ba1f05abd~mv2.webp" style="width:100%;"
+      alt="Screenshot of CanadaToGo homepage">
+    </div>
+    <video width="50%" controls=autoplay>
+      <source src="VanBCToGoDemo.mp4" type=video/mp4>
+    </video>
+</div>
+</div>
+  <div class="main">
     <h2>CanadaToGo/VanBCToGo</h2>
     <h4>August 2020 - present</h4>
     <p>CanadaToGo (initiated in Vancouver exclusively under VanBCToGo) is a web-based listing platform for local restaurants Canada-wide. 
@@ -186,7 +279,7 @@ body {
 
     <h4>Explore:
       <a
-    href="https://www.canadatogo.ca/">CanadaToGo</a>
+    href="https://www.canadatogo.ca/">CanadaToGo,</a>
     <a
     href="https://www.vanbctogo.ca/">VanBCToGo</a>
   </h4>
@@ -200,33 +293,46 @@ body {
 <div>
   <div class="row"> 
     <div class="side">
-      <img src="https://uploads-ssl.webflow.com/5ab99dd5a721b51066f4a882/5b0468ea38d46b62df5d51e6_logo.png" style="height:100px;"
-      alt="BizTech Logo">
-      <img src="https://static.wixstatic.com/media/4d641b_0992c37a52254e6c90bcecf4654f0687~mv2.png/v1/fill/w_1184,h_232,al_c,lg_1,q_90/4d641b_0992c37a52254e6c90bcecf4654f0687~mv2.webp" style="width:350px;"
-      alt="ThinkTech Logo">
-      <br>
-      <img src="https://static.wixstatic.com/media/4d641b_03732e63d6b248f8a32b03c97cf3dead~mv2.png/v1/fill/w_1184,h_831,al_c,q_90,usm_0.66_1.00_0.01/4d641b_03732e63d6b248f8a32b03c97cf3dead~mv2.webp" style="width:200px;"
-      alt="GameWorld Switch Skin Cutomization">
-      <img src="https://static.wixstatic.com/media/4d641b_63d2141e6030404eb26cebefe79bd8a7~mv2.jpg/v1/fill/w_1184,h_620,al_c,q_90,usm_0.66_1.00_0.01/4d641b_63d2141e6030404eb26cebefe79bd8a7~mv2.webp" style="width:250px;"
-      alt="Build Your Brand Banner">
-      
-      <br>
-      <img src="https://static.wixstatic.com/media/4d641b_12cb0bd9c8564201b351155d29ff0fef~mv2.png/v1/fill/w_612,h_792,al_c,q_90/4d641b_12cb0bd9c8564201b351155d29ff0fef~mv2.webp" style="width:150px;"
-      alt="BP Partner Package Title">
-      <img src="https://static.wixstatic.com/media/4d641b_10e355b431494a98b5cc42fe3e9daab0~mv2.png/v1/fill/w_612,h_792,al_c,q_90/4d641b_10e355b431494a98b5cc42fe3e9daab0~mv2.webp" style="width:150px;"
-      alt="BP Partner Package Content">
-      <img src="https://static.wixstatic.com/media/4d641b_8fc3e8770c364607b1df1e549a02fabe~mv2.png/v1/fill/w_612,h_792,al_c,q_90/4d641b_8fc3e8770c364607b1df1e549a02fabe~mv2.webp" style="width:150px;"
-      alt="BP Partner Package Content Pictures">
+      <div class="column">
+        <img class="demo cursor" src="https://static.wixstatic.com/media/4d641b_63d2141e6030404eb26cebefe79bd8a7~mv2.jpg/v1/fill/w_1184,h_620,al_c,q_90,usm_0.66_1.00_0.01/4d641b_63d2141e6030404eb26cebefe79bd8a7~mv2.webp" style="width:100%;"
+        alt="Build Your Brand Banner">
+        <img class="demo cursor" src="Switch Skin.png" style="width:90%;"
+        alt="GameWorld Switch Skin Cutomization">
+      </div>
 
+      <div class="column">
+        <img class="demo cursor" src="Event Banner.jpg" style="width:100%;"
+        alt="Produthon Banner">
+        <br>
+        <br>
+        <img class="demo cursor" src="FinTechFacebook.png" style="width:100%;"
+        alt="FinTech Banner">
+      </div>
+
+      <div class="column">
+        <img class="demo cursor" src="https://static.wixstatic.com/media/4d641b_12cb0bd9c8564201b351155d29ff0fef~mv2.png/v1/fill/w_612,h_792,al_c,q_90/4d641b_12cb0bd9c8564201b351155d29ff0fef~mv2.webp" style="width:100%;"
+        alt="BP Partner Package Title">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="https://static.wixstatic.com/media/4d641b_10e355b431494a98b5cc42fe3e9daab0~mv2.png/v1/fill/w_612,h_792,al_c,q_90/4d641b_10e355b431494a98b5cc42fe3e9daab0~mv2.webp" style="width:100%;"
+        alt="BP Partner Package Content">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="https://static.wixstatic.com/media/4d641b_8fc3e8770c364607b1df1e549a02fabe~mv2.png/v1/fill/w_612,h_792,al_c,q_90/4d641b_8fc3e8770c364607b1df1e549a02fabe~mv2.webp" style="width:100%;"
+        alt="BP Partner Package Content Pictures">
+      </div>
     </div> 
-    
+  </div>
+</div>
+
+</div> 
   <div class="main">
     <br>
     <br>
     <h2>UBC BizTech</h2>
-    <h4>August 2020 - present</h4>
+    <h4>August 2020 - April 2021</h4>
     <p>
-      As a first year design director with UBC BizTech, the bulk of my work is creating promotional material and web app design. 
+      As a design director with UBC BizTech, the bulk of my work is creating promotional material and web app design. 
       From basic social media graphics, event branding, and customizing merchandise and prizes, to interactive media design and 
       user interface design in collaboration with our internal development team, my interconnected role on the team has pushed 
       me to hone my technical design skills and exposed me to opportunities for collaboration for every project. 
@@ -245,7 +351,9 @@ body {
     </p>
     <h4>Explore:
       <a
-    href="https://www.ubcbiztech.com/">UBC BizTech</a>
+    href="https://www.ubcbiztech.com/">UBC BizTech,</a>
+      <a
+    href="https://app.ubcbiztech.com/">BizTech WebApp</a>
   </h4>
   </div>
 </div>
@@ -257,23 +365,21 @@ body {
 <div>
   <div class="row"> 
     <div class="side">
-      <br>
-      <br>
-      <br>
-      <video width="450" controls=autoplay>
-        <source src="CUS SUS HP.mov" type=video/mp4>
-      </video>
-
-      <img src="https://static.wixstatic.com/media/4d641b_c0ca0742cd0c4355aa75d0364a943875~mv2.png/v1/fill/w_1184,h_666,al_c,q_90,usm_0.66_1.00_0.01/4d641b_c0ca0742cd0c4355aa75d0364a943875~mv2.webp"
-      style="width:450px;" alt="Are you smarter than a thrift grader? Event Banner">
-
+      <div class="twocolumn">
+        <video width="100%" controls=autoplay>
+          <source src="CUS SUS HP.mov" type=video/mp4>
+        </video>
+      </div>
+      <div class="twocolumn">
+        <img class="demo cursor" src="https://static.wixstatic.com/media/4d641b_c0ca0742cd0c4355aa75d0364a943875~mv2.png/v1/fill/w_1184,h_666,al_c,q_90,usm_0.66_1.00_0.01/4d641b_c0ca0742cd0c4355aa75d0364a943875~mv2.webp"
+        style="width:83%;" alt="Are you smarter than a thrift grader? Event Banner">
+      </div>
     </div> 
-    
+</div>
+</div>
   <div class="main">
-    <br>
-    <br>
     <h2>CUS Sustainability</h2>
-    <h4>July 2020 - present</h4>
+    <h4>July 2020 - April 2021</h4>
     <p>
       My creative content direction with CUS Sustainability is centred around web development, maintenance, and UI/UX design. With a focus on content flow, user interactions, visual composition, mobile optimization, and more, 
       I led the CUS Sustainability site revamp that resulted in commendation by the UBC Commerce Undergraduate Society and became the referred page from the UBC Sauder School of Business Sustainability and Social Impact concentration information page. 
@@ -302,21 +408,15 @@ body {
 <div>
   <div class="row"> 
     <div class="side">
-      <br>
-      <br>
-      <br>
-      <!-- 
-        <img src="mala_world_ss.png" style="width:450px;" alt="Welcome to Mala World">
-      <img src="https://www.sfu.ca/content/sfu/vc/about/startups/mala-the-brand/jcr:content/main_content/image_2084841232.img.640.medium.png/1599781698399.png"
-      style="height:100px;" alt="Mala the Brand Logo"> -->
-      <video width="450" controls=autoplay>
-        <source src="MalaWorld.mov" type=video/mp4>
-      </video>
+      <div class="twocolumn">
+        <video width="450" controls=autoplay>
+          <source src="MalaWorld.mov" type=video/mp4>
+        </video>
     </div> 
+  </div>
+</div>
     
   <div class="main">
-    <br> 
-    <br>
     <h2>Mala the Brand</h2>
     <h4>June 2020 - September 2020</h4>
     <p>
