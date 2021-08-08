@@ -40,7 +40,7 @@ body {
 .navbar a {
   float: left;
   display: outline;
-  color: black;
+  color: grey;
   text-align: center;
   padding: 14px 20px;
   text-decoration: none;
@@ -62,23 +62,35 @@ body {
   display: -ms-flexbox; /* IE10 */
   display: flex;
   -ms-flex-wrap: wrap; /* IE10 */
+  text-align: center;
   flex-wrap: wrap;
 }
+
+/* Column container */
+.top {  
+  -ms-flex: 100%; /* IE10 */
+  flex: 100%;
+  text-align: center;
+  background-color: #FFF;
+  padding: 20px;
+}
+
 
 /* Create two unequal columns that sits next to each other */
 /* Sidebar/left column */
 .side {
-  -ms-flex: 40%; /* IE10 */
-  flex: 40%;
-  text-align: center;
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+  text-align: left;
   background-color: #FFF;
   padding: 20px;
 }
 
 /* Main column */
 .main {   
-  -ms-flex: 60%; /* IE10 */
-  flex: 60%;
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+  text-align: right;
   background-color: white;
   padding: 20px;
 }
@@ -89,6 +101,11 @@ body {
   text-align: center;
   background: #FFF;
 }
+
+.space {
+     margin-bottom: 2cm;
+}
+
 
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 700px) {
@@ -124,80 +141,102 @@ body {
   <a href="https://www.linkedin.com/in/kaoshannon"class="right">connect</a>
 </div>
 
-
-
 <div class="row">
-  <div class="side">
-  <h1>AUGMENTED REALITY LABORATORY </h1>
-  <p>
-      Experimentation zone for augmented and virtual reality projects. 
-  </p>
-
-  <br>
-  <video width="300" height="560" controls=autoplay>
-      <source src="BP_koi_blue.mp4" type=video/mp4>
-      </video> 
-
-  <video width="300" height="560" controls=autoplay>
-    <source src="FinTech Filter.MOV" type=video/mp4> 
-    </video> 
-
-
-
-
-<div>
-  <h4>
-    <p>
-    Try out the 2021 UBC BizTech BluePrint Conference promotional filters yourself <a
-    href="https://www.instagram.com/ar/694969598050302/">here</a>,
-    or find out how much your make on your next AlgoTrade 
-    <a href="https://www.instagram.com/ar/426551375283534/">here</a>!
-  </p>
-</h4>
-</div>
-
-
-<br>
-
-<div class="row">
-  <div class="side">
-  <video width="300" height="560" controls=autoplay>
-    <source src="ACShannon.mp4" type=video/mp4>
-    </video> 
-
-  <video width="300" height="560" controls=autoplay>
-    <source src="Totoro.mov" type=video/mp4>
-    </video> 
-
-  <video width="300" height="560" controls=autoplay>
-    <source src="GRADStan.mp4" type=video/mp4>
-    </video> 
-
-
-  <h4>
-    <p>
-      Become an Animal Crossing villager <a
-      href="https://www.facebook.com/fbcameraeffects/testit/220269932644539/NDYwYWFkYWI1NDRmODVhYmIzOTNhNzI3ZjBjODYyZmE=/">here</a>,
-      hop in the Ghibli cinematic universe <a
-      href="https://www.instagram.com/ar/209426510709520">here</a>,
-      or graduate from home with us <a
-      href="https://www.instagram.com/ar/726093001494081/">here!</a>
-    </p>
-  </h4>
+  <div class="top">
+    <h1>AUGMENTED REALITY LABORATORY </h1>
+    <p> Experimentation zone for augmented and virtual reality projects.</p>
   </div>
 </div>
 
-  <br>
-  <br>
-  <br> 
+<div class="row">
+  <div class="main">
+    <video width="300" height="560" controls=autoplay>
+      <source src="ACShannon.mp4" type=video/mp4>
+    </video> 
+  </div>
+  <div class="side">
+    <h4>
+      <a
+      href="https://www.facebook.com/fbcameraeffects/testit/220269932644539/NDYwYWFkYWI1NDRmODVhYmIzOTNhNzI3ZjBjODYyZmE=/">
+      GET TRANSPORTED TO THE ANIMAL CROSSING CINEMATIC UNIVERSE</a>
+    </h4>
+  </div>
 
+  <div class="main">
+    <h4>
+      <a
+      href="https://www.instagram.com/ar/209426510709520">
+      LET ME MAKE YOU TOTORO</a>
+    </h4>
+  </div>
+  <div class="side">
+    <video width="300" height="560" controls=autoplay>
+      <source src="Totoro.mov" type=video/mp4>
+    </video> 
+  </div>
 
+  <div class="main">
+    <video width="300" height="560" controls=autoplay>
+      <source src="GRADStan.mp4" type=video/mp4>
+      </video> 
+  </div>
+  <div class="side">
+    <h4>
+      <a
+      href="https://www.instagram.com/ar/726093001494081/">
+      GRADUATE FROM HOME WITH US</a>
+    </h4>
+  </div>
 
+  <div class="main">
+    <h4>
+      <a
+      href="https://www.instagram.com/ar/694969598050302/">
+      SEE YOU AT UBC BIZTECH'S BLUEPRINT CONFERENCE</a>
+    </h4>
+  </div>
+  <div class="side">
+    <video width="300" height="560" controls=autoplay>
+      <source src="BP_koi_blue.mp4" type=video/mp4>
+    </video> 
+  </div>
 
-<div class="footer">
-    <p class="love">Built with lots of caffeine, an endless lofi playlist, and ❤︎ </p>
-  <p>2021 by Shannon Kao</p>
+  <div class="main">
+    <video width="300" height="560" controls=autoplay>
+      <source src="FinTech Filter.MOV" type=video/mp4>
+      </video> 
+  </div>
+  <div class="side">
+    <h4>
+      <a
+      href="https://www.instagram.com/ar/426551375283534/">
+      HOW MUCH WILL YOUR MAKE ON YOUR ALGOTRADE?</a>
+    </h4>
+  </div>
 </div>
 
+<br> 
+<br> 
+<br>
+<br> 
+<br> 
+<br>
+<br> 
+<br> 
+<br>
+<br> 
+<br> 
+<br>
+
+<div class="main">
+  <div class="side">
+    <div class="footer">
+      <p class="love">Built with lots of caffeine, an endless lofi playlist, and ❤︎ </p>
+        <p>2021 by Shannon Kao</p>
+      </div>
+  </div>
+</div>
+  
 </body>
 </html>
+  
