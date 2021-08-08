@@ -65,11 +65,20 @@ body {
   flex-wrap: wrap;
 }
 
+/* Column container */
+.top {  
+  -ms-flex: 100%; /* IE10 */
+  flex: 100%;
+  text-align: center;
+  background-color: #FFF;
+  padding: 20px;
+}
+
 /* Create two unequal columns that sits next to each other */
 /* Sidebar/left column */
 .side {
-  -ms-flex: 40%; /* IE10 */
-  flex: 40%;
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
   text-align: center;
   background-color: #FFF;
   padding: 20px;
@@ -77,8 +86,9 @@ body {
 
 /* Main column */
 .main {   
-  -ms-flex: 60%; /* IE10 */
-  flex: 60%;
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+  text-align: center;
   background-color: white;
   padding: 20px;
 }
@@ -104,6 +114,26 @@ body {
     width: 100%;
   }
 }
+
+.video-container {
+    overflow: hidden;
+    position: relative;
+    width:100%;
+}
+
+.video-container::after {
+    padding-top: 56.25%;
+    display: block;
+    content: '';
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 </style>
 </head>
 
@@ -124,35 +154,43 @@ body {
   <a href="https://www.linkedin.com/in/kaoshannon"class="right">connect</a>
 </div>
 
-<!--videos-->
 <div class="row">
-  <div class="side">
+  <div class="top">
     <h1>FEATURED FILMS</h1>
-    <p>
-        Let me show you the world through my eyes.
-    </p>
-    <div class="main">
-      <iframe width="980" height="551.25" src="https://www.youtube.com/embed/8QmE59LZ-7o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-    <br>
-    <br>
-    <br>
-    <div class="main">
-      <iframe width="980" height="551.25" src="https://www.youtube.com/embed/PvwMTdFjUL4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-    <br>
-    <br>
-    <br>
-    <div class="main">
-    <iframe width="980" height="551.25" src="https://www.youtube.com/embed/ivtMQFp3pp0" allowfullscreen></iframe>
-    </div>
-    <br>
-    <br>
-    <br>
-    <div class="main">
-    <iframe width="980" height="551.25" src="https://www.youtube.com/embed/NSXi4GSD0c0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
+    <p>Let me show you the world through my eyes.</p>
   </div>
+</div>
+
+<!--videos-->
+<div class="video-container">
+  <iframe src="https://www.youtube.com/embed/8QmE59LZ-7o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+<div class="video-container">
+  <iframe src="https://www.youtube.com/embed/PvwMTdFjUL4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+<div class="video-container">
+  <iframe src="https://www.youtube.com/embed/ivtMQFp3pp0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+<div class="video-container">
+  <iframe src="https://www.youtube.com/embed/NSXi4GSD0c0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 <br>
@@ -165,13 +203,15 @@ body {
 <br>
 <br>
 
-<div class="side">
+<div class="row">
+  <div class="top">
     <h3>I have more to show you
       <a
       href="https://www.youtube.com/channel/UCruChN8AY0jhzPJhg3QjLbw/featured">here</a>
-      </h3>
+    </h3>
   </div>
 </div>
+
 
 <div class="footer">
   <p class="love">Built with lots of caffeine, an endless lofi playlist, and ❤︎ </p>
