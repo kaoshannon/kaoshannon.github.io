@@ -6,21 +6,11 @@
   box-sizing: border-box;
 }
 
-/* SLIDE */
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
-
-/* On hover, add a black background color with a little bit see-through */
 .prev:hover,
 .next:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Caption text */
 .text {
   color: #f2f2f2;
   font-size: 15px;
@@ -37,20 +27,17 @@
   clear: both;
 }
 
-/* Five columns side by side */
 .columns {
   float: left;
   width: 20%;
 }
 
-/* Two columns side by side */
 .lovecolumn {
   float: right;
   width: 50%;
   padding: 30px;
 }
 
-/* Add a transparency effect for thumnbail images */
 .demo {
   opacity: 0.9;
 }
@@ -60,13 +47,11 @@
   opacity: 1;
 }
 
-/* Style the body */
 body {
   font-family: "Tahoma", sans-serif;
   margin: 10;
 }
 
-/* Header/logo Title */
 .header {
   padding: 40px;
   text-align: left;
@@ -74,47 +59,40 @@ body {
   color: white;
 }
 
-/* Increase the font size of the heading */
 .header h1 {
   font-size: 40px;
 }
 
-/* Column container */
 .row {
-  display: -ms-flexbox; /* IE10 */
+  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
-/* Column container */
 .top {
-  -ms-flex: 100%; /* IE10 */
+  -ms-flex: 100%;
   flex: 100%;
   text-align: center;
   background-color: #fff;
   padding: 20px;
 }
 
-/* Create two unequal columns that sits next to each other */
-/* Sidebar/left column */
 .side {
-  -ms-flex: 40%; /* IE10 */
+  -ms-flex: 40%;
   flex: 40%;
   text-align: center;
   background-color: #fff;
   padding: 20px;
 }
 
-/* Main column */
 .main {
-  -ms-flex: 60%; /* IE10 */
+  -ms-flex: 60%;
   flex: 60%;
   background-color: white;
   padding: 40px;
 }
 
-/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 400px) {
   .row {
     flex-direction: column;

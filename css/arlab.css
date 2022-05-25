@@ -6,21 +6,11 @@
   box-sizing: border-box;
 }
 
-/* SLIDE */
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
-
-/* On hover, add a black background color with a little bit see-through */
 .prev:hover,
 .next:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Caption text */
 .text {
   color: #f2f2f2;
   font-size: 15px;
@@ -37,42 +27,35 @@
   clear: both;
 }
 
-/* Five columns side by side */
 .column {
   float: left;
   width: 100%;
   vertical-align: baseline;
 }
 
-/* Add a transparency effect for thumnbail images */
 .demo {
-  /* opacity: 0.8; */
   filter: brightness(80%);
 }
 
 .active,
 .demo:hover {
-  /* opacity: 1; */
   filter: brightness(100%);
 }
 
-/* Style the body */
 body {
   font-family: "Tahoma", sans-serif;
   margin: 10;
 }
 
-/* Column container */
 .row {
-  display: -ms-flexbox; /* IE10 */
+  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
-/* Column container */
 .top {
-  -ms-flex: 100%; /* IE10 */
+  -ms-flex: 100%;
   flex: 100%;
   text-align: center;
   background-color: #fff;
@@ -80,16 +63,15 @@ body {
 }
 
 .left {
-  -ms-flex: 20%; /* IE10 */
+  -ms-flex: 20%;
   flex: 20%;
   background-color: white;
   padding: 30px;
   text-align: right;
 }
 
-/* Main column */
 .main {
-  -ms-flex: 60%; /* IE10 */
+  -ms-flex: 60%;
   flex: 60%;
   background-color: white;
   padding: 30px;
@@ -97,21 +79,19 @@ body {
 }
 
 .right {
-  -ms-flex: 20%; /* IE10 */
+  -ms-flex: 20%;
   flex: 20%;
   background-color: white;
   padding: 30px;
   text-align: left;
 }
 
-/* Footer */
 .footer {
   padding: 20px;
   text-align: center;
   background: #fff;
 }
 
-/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 200px) {
   .row {
     flex-direction: column;

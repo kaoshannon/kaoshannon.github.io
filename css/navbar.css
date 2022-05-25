@@ -1,11 +1,9 @@
-/* Style the top navigation bar */
 .navbar {
   overflow: hidden;
   background-color: #ffffff;
   padding: 0px 30px;
 }
 
-/* Style the navigation bar links */
 .navbar a {
   float: left;
   display: outline;
@@ -19,13 +17,11 @@ Right-aligned link .navbar a.right {
   float: right;
 }
 
-/* Change color on hover */
 .navbar a:hover {
   background-color: #100;
   color: white;
 }
 
-/* Style the navigation bar links */
 .navbar_link {
   float: left;
   display: outline;
@@ -35,12 +31,10 @@ Right-aligned link .navbar a.right {
   text-decoration: none;
 }
 
-/* Right-aligned link */
 .navbar_right {
   float: right;
 }
 
-/* Change color on hover */
 .navbar_hover {
   background-color: #100;
   color: white;
@@ -66,13 +60,11 @@ Right-aligned link .navbar a.right {
   text-decoration: none;
 }
 
-/* Change color on hover */
 .contacts a:hover {
   background-color: white;
   color: black;
 }
 
-/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
 @media screen and (max-width: 400px) {
   .navbar a {
     float: none;
