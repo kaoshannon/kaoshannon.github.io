@@ -1,0 +1,25 @@
+/* Header/logo Title */
+.header {
+  padding: 30px;
+  text-align: left;
+  background: #fff;
+  color: black;
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+  font-size: 40px;
+  text-align: right;
+}
+
+/* Footer */
+.footer {
+  padding: 30px;
+  color: grey;
+  text-align: center;
+  background: #fff;
+}
+
+.love {
+  text-align: center;
+}
