@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --gallery-green: #4a7c59;
+  --gallery-red: #8b2635;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  margin: 0;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+.font-serif {
+  font-family: 'Playfair Display', serif;
+}
+
+.bg-gallery-green {
+  background-color: var(--gallery-green);
+}
+
+.bg-gallery-red {
+  background-color: var(--gallery-red);
+}
+
+/* Hover effects for frames */
+.cursor-pointer:hover {
+  transform: scale(1.02);
+  transition: transform 0.2s ease;
+}
+
+/* Navigation styling */
+nav button {
+  position: relative;
+  overflow: hidden;
+}
+
+nav button::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #fbbf24;
+  transition: width 0.3s ease;
+}
+
+nav button:hover::after {
+  width: 100%;
+}
+
+/* Focus states for accessibility */
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid #fbbf24;
+  outline-offset: 2px;
+}
+
+/* Smooth transitions */
+* {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .absolute {
+    transform: scale(0.8);
+  }
+  
+  nav {
+    right: 4px;
+    font-size: 14px;
+  }
+}
