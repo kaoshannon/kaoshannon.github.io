@@ -67,7 +67,7 @@ function App() {
             <div className="flex justify-center lg:justify-end">
               <div className="cursor-pointer" onClick={() => window.open('https://www.youtube.com/embed/49LiLYefg30?si=lS_yKP5QWNT9I59Z', '_blank')}>
                 <div className="relative w-full max-w-sm sm:max-w-md lg:max-w-lg xl:max-w-xl">
-                  <div className="relative w-full aspect-[3/2] sm:aspect-[3/2] lg:w-[400px] lg:h-[280px] xl:w-[500px] xl:h-[350px] flex items-center justify-center">
+                  <div className="relative w-full aspect-[3/2] sm:aspect-[3/2] lg:w-[400px] lg:h-full xl:w-[500px] xl:h-full flex items-center justify-center">
                     <img
                       src={frame2}
                       alt="Ornate Frame"
