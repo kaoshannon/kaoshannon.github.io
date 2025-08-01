@@ -1,4 +1,11 @@
 import React, { useState } from 'react';
+import logo from './assets/icons/logo.svg';
+import frame1 from './assets/images/frame-1.webp';
+import frame2 from './assets/images/frame-2.png';
+import frame3 from './assets/images/frame-3.png';
+import frameCircle from './assets/images/frame-circular.png';
+import bench from './assets/images/bench.png';
+import photo from './assets/photos/IMG_8173.jpg';
 
 function App() {
   const [currentSection, setCurrentSection] = useState('gallery');
@@ -89,67 +96,57 @@ function App() {
     <div className="min-h-screen relative overflow-hidden">
       {/* Green gallery wall background */}
       <div className="absolute inset-0 bg-gallery-green"></div>
-      
+
       {/* Red carpet at bottom */}
       <div className="absolute bottom-0 left-0 w-full h-64 bg-gallery-red"></div>
-      
+
       {/* Main large artwork frame - left side */}
       <div className="absolute" style={{ top: '15%', left: '8%' }}>
         <div className="relative">
-          <img 
-            src="https://cdn.pixabay.com/photo/2017/01/13/01/22/vintage-1976312_1280.png" 
-            alt="Ornate Frame"
-            className="w-96 h-auto"
-          />
-          <div className="absolute inset-0 flex items-center justify-center" style={{ top: '12%', left: '12%', right: '12%', bottom: '12%' }}>
-            <img 
-              src="https://images.pexels.com/photos/1109541/pexels-photo-1109541.jpeg?auto=compress&cs=tinysrgb&w=600"
-              alt="Elephant artwork"
-              className="w-full h-full object-cover"
+          <div className="relative w-96">
+            <img
+              src={photo}
+              alt="Elephant photo"
+              className="absolute w-full h-64 object-contain z-0"
+            />
+            <img
+              src={frame1}
+              alt="Ornate Frame"
+              className="absolute w-full h-480 rotate-90 z-10 pointer-events-none"
             />
           </div>
         </div>
       </div>
 
       {/* YouTube video frame - center right */}
-      <div className="absolute cursor-pointer" style={{ top: '18%', left: '52%' }} onClick={() => window.open('https://youtube.com', '_blank')}>
-        <div className="relative">
-          <img 
-            src="https://cdn.pixabay.com/photo/2017/01/13/01/22/vintage-1976312_1280.png" 
+      <div className="absolute cursor-pointer" style={{ top: '18%', left: '52%' }} onClick={() => window.open('https://www.youtube.com/embed/49LiLYefg30?si=lS_yKP5QWNT9I59Z', '_blank')}>
+        <div className="relative w-100 h-auto">
+          <iframe
+            className="w-70 h-auto z-0 relative"
+            src="https://www.youtube.com/embed/49LiLYefg30?si=lS_yKP5QWNT9I59Z"
+            title="YouTube video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          ></iframe>
+          <img
+            src={frame2}
             alt="Ornate Frame"
-            className="w-80 h-auto"
+            className="absolute inset-0 w-full h-full z-10 pointer-events-none"
           />
-          <div className="absolute inset-0 flex items-center justify-center" style={{ top: '12%', left: '12%', right: '12%', bottom: '12%' }}>
-            <div className="relative w-full h-full bg-black">
-              <img 
-                src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600"
-                alt="Video thumbnail"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="bg-red-600 rounded-full p-3 shadow-lg">
-                  <svg className="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M8 5v14l11-7z"/>
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
 
       {/* Monogram frame - top right */}
       <div className="absolute" style={{ top: '8%', right: '8%' }}>
         <div className="relative">
-          <img 
-            src="https://cdn.pixabay.com/photo/2017/01/13/01/22/vintage-1976312_1280.png" 
-            alt="Ornate Frame"
-            className="w-32 h-auto"
-          />
-          <div className="absolute inset-0 flex items-center justify-center" style={{ top: '15%', left: '15%', right: '15%', bottom: '15%' }}>
-            <div className="w-full h-full bg-emerald-800 rounded-full flex items-center justify-center">
-              <span className="text-white text-2xl font-serif font-bold">KS</span>
+          <div className="relative w-32 h-auto">
+            <div className="absolute inset-0 flex items-center justify-center z-0" style={{ top: '15%', left: '15%', right: '15%', bottom: '15%' }}>
+              <div className="w-full h-full bg-emerald-800 rounded-full flex items-center justify-center">
+                <img src={logo} alt="logo" className="w-16 h-16" />
+              </div>
             </div>
+            <img src={frameCircle} alt="Ornate Frame" className="w-32 h-auto relative z-1" />
           </div>
         </div>
       </div>
@@ -158,13 +155,13 @@ function App() {
       {/* MeshGradient/Substack frame */}
       <div className="absolute cursor-pointer" style={{ top: '45%', left: '48%' }} onClick={() => window.open('https://substack.com', '_blank')}>
         <div className="relative">
-          <img 
-            src="https://cdn.pixabay.com/photo/2017/01/13/01/22/vintage-1976312_1280.png" 
+          <img
+            src="https://cdn.pixabay.com/photo/2017/01/13/01/22/vintage-1976312_1280.png"
             alt="Small Frame"
             className="w-16 h-auto"
           />
           <div className="absolute inset-0 flex items-center justify-center" style={{ top: '20%', left: '20%', right: '20%', bottom: '20%' }}>
-            <img 
+            <img
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/MeshGradient_logo.svg/512px-MeshGradient_logo.svg.png"
               alt="MeshGradient"
               className="w-full h-full object-contain"
@@ -176,15 +173,15 @@ function App() {
       {/* Substack frame */}
       <div className="absolute cursor-pointer" style={{ top: '45%', left: '58%' }} onClick={() => window.open('https://substack.com', '_blank')}>
         <div className="relative">
-          <img 
-            src="https://cdn.pixabay.com/photo/2017/01/13/01/22/vintage-1976312_1280.png" 
+          <img
+            src="https://cdn.pixabay.com/photo/2017/01/13/01/22/vintage-1976312_1280.png"
             alt="Small Frame"
             className="w-16 h-auto"
           />
           <div className="absolute inset-0 flex items-center justify-center" style={{ top: '20%', left: '20%', right: '20%', bottom: '20%' }}>
             <div className="w-full h-full bg-orange-500 flex items-center justify-center">
               <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/>
+                <path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z" />
               </svg>
             </div>
           </div>
@@ -194,13 +191,13 @@ function App() {
       {/* LinkedIn frame */}
       <div className="absolute cursor-pointer" style={{ top: '58%', left: '45%' }} onClick={() => window.open('https://linkedin.com', '_blank')}>
         <div className="relative">
-          <img 
-            src="https://cdn.pixabay.com/photo/2017/01/13/01/22/vintage-1976312_1280.png" 
+          <img
+            src="https://cdn.pixabay.com/photo/2017/01/13/01/22/vintage-1976312_1280.png"
             alt="Small Frame"
             className="w-16 h-auto"
           />
           <div className="absolute inset-0 flex items-center justify-center" style={{ top: '20%', left: '20%', right: '20%', bottom: '20%' }}>
-            <img 
+            <img
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/768px-LinkedIn_logo_initials.png"
               alt="LinkedIn"
               className="w-full h-full object-contain"
@@ -212,13 +209,13 @@ function App() {
       {/* Instagram frame */}
       <div className="absolute cursor-pointer" style={{ top: '58%', left: '55%' }} onClick={() => window.open('https://instagram.com', '_blank')}>
         <div className="relative">
-          <img 
-            src="https://cdn.pixabay.com/photo/2017/01/13/01/22/vintage-1976312_1280.png" 
+          <img
+            src="https://cdn.pixabay.com/photo/2017/01/13/01/22/vintage-1976312_1280.png"
             alt="Small Frame"
             className="w-16 h-auto"
           />
           <div className="absolute inset-0 flex items-center justify-center" style={{ top: '20%', left: '20%', right: '20%', bottom: '20%' }}>
-            <img 
+            <img
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/768px-Instagram_icon.png"
               alt="Instagram"
               className="w-full h-full object-contain"
@@ -229,8 +226,8 @@ function App() {
 
       {/* Gallery bench */}
       <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2">
-        <img 
-          src="https://purepng.com/public/uploads/large/purepng.com-black-benchfurnitureobjects-black-bench-1701527825765wjqhd.png"
+        <img
+          src={bench}
           alt="Gallery Bench"
           className="w-96 h-auto"
         />
@@ -262,7 +259,7 @@ function App() {
 
       {/* Section overlays */}
       {renderSection()}
-    </div>
+    </div >
   );
 }
 
