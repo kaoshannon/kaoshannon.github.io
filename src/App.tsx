@@ -21,8 +21,19 @@ function App() {
       {/* Green gallery wall background */}
       <div className="absolute inset-0 bg-gallery-green"></div>
 
+      {/* Gallery bench */}
+      <div className="fixed bottom-20 left-1/2 lg:left-3/4 z-30 transform -translate-x-1/2 pointer-events-none">
+        <div className="w-56 min-w-56 sm:w-64 lg:w-80 xl:w-96">
+          <img
+            src={bench}
+            alt="Gallery Bench"
+            className="w-full h-auto"
+          />
+        </div>
+      </div>
+
       {/* Red carpet at bottom */}
-      <div className="absolute bottom-0 left-0 w-full h-16 sm:h-24 md:h-32 lg:h-64 bg-gallery-red"></div>
+      <div className="absolute bottom-0 left-0 w-full min-h-32 h-32 xs:h-32 sm:h-32 md:h-32 lg:h-64 bg-gallery-red"></div>
 
       {/* Main content container */}
       <div className="relative z-10 px-4 sm:px-6 lg:px-8 pt-8 sm:pt-12 lg:pt-16">
@@ -256,17 +267,6 @@ function App() {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-
-        {/* Gallery bench */}
-        <div className="mt-8 sm:mt-12 lg:mt-16 xl:mt-20 flex justify-center lg:justify-start lg:ml-16 xl:ml-24">
-          <div className="w-48 sm:w-64 lg:w-80 xl:w-96">
-            <img
-              src={bench}
-              alt="Gallery Bench"
-              className="w-full h-auto"
-            />
           </div>
         </div>
       </div>
