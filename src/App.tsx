@@ -197,7 +197,7 @@ function App() {
             </div>
 
             {/* Substack frame - top right area */}
-            <div className="absolute cursor-pointer" style={{ top: '20%', left: '40%' }} onClick={() => window.open('https://substack.com/@kaoshannon', '_blank')}>
+            <div className="absolute cursor-pointer" style={{ top: '24%', left: '40%' }} onClick={() => window.open('https://substack.com/@kaoshannon', '_blank')}>
               <div className="relative w-20 h-20 xl:w-24 xl:h-24">
                 <img
                   src={frameSquare2}
@@ -231,7 +231,7 @@ function App() {
             </div>
 
             {/* Instagram frame - bottom right area */}
-            <div className="absolute cursor-pointer" style={{ top: '70%', left: '35%' }} onClick={() => window.open('https://instagram.com/shannon.kao', '_blank')}>
+            <div className="absolute cursor-pointer" style={{ top: '70%', left: '30%' }} onClick={() => window.open('https://instagram.com/shannon.kao', '_blank')}>
               <div className="relative w-20 h-20 xl:w-24 xl:h-24">
                 <img
                   src={frameSquare1}
