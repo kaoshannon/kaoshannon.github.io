@@ -272,7 +272,7 @@ function App() {
       </div>
 
       {/* Navigation menu - responsive positioning */}
-      <div className="fixed z-20 bottom-4 right-4 sm:bottom-32 sm:right-6 lg:right-8 lg:top-1/2 lg:transform lg:-translate-y-1/2">
+      <div className="fixed z-20 bottom-32 right-4 sm:bottom-32 sm:right-6 lg:right-8 lg:top-1/2 lg:transform lg:-translate-y-1/2">
         <nav className="space-y-2 sm:space-y-4 lg:space-y-6">
           <button
             onClick={() => setCurrentSection('theatre')}
