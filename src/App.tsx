@@ -22,7 +22,7 @@ function App() {
       <div className="absolute inset-0 bg-gallery-green"></div>
 
       {/* Gallery bench */}
-      <div className="fixed bottom-20 left-1/2 lg:left-3/4 z-30 transform -translate-x-1/2 pointer-events-none">
+      <div className="absolute bottom-0 mb-20 left-1/2 lg:left-3/4 z-30 transform -translate-x-1/2 pointer-events-none">
         <div className="w-56 min-w-56 sm:w-64 lg:w-80 xl:w-96">
           <img
             src={bench}
@@ -57,8 +57,8 @@ function App() {
 
           {/* Main large artwork frame - positioned organically */}
           <div className="flex justify-center lg:justify-start lg:ml-8 xl:ml-16">
-            <div className="relative w-full max-w-sm sm:max-w-md lg:max-w-lg xl:max-w-xl">
-              <div className="relative w-full aspect-[3/2] sm:aspect-[3/2] lg:w-[500px] lg:h-[350px] xl:w-[600px] xl:h-[400px]">
+            <div className="relative w-full max-w-xs sm:max-w-sm lg:max-w-md xl:max-w-lg">
+              <div className="relative w-full aspect-[3/2] sm:aspect-[3/2] lg:w-[350px] lg:h-[230px] xl:w-[420px] xl:h-[280px]">
                 <img
                   src={photo}
                   alt="Elephant photo"
@@ -272,7 +272,7 @@ function App() {
       </div>
 
       {/* Navigation menu - responsive positioning */}
-      <div className="fixed z-20 bottom-4 right-4 sm:bottom-6 sm:right-6 lg:right-8 lg:top-1/2 lg:transform lg:-translate-y-1/2">
+      <div className="fixed z-20 bottom-4 right-4 sm:bottom-32 sm:right-6 lg:right-8 lg:top-1/2 lg:transform lg:-translate-y-1/2">
         <nav className="space-y-2 sm:space-y-4 lg:space-y-6">
           <button
             onClick={() => setCurrentSection('theatre')}
