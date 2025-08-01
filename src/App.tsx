@@ -58,7 +58,7 @@ function App() {
           {/* Main large artwork frame - positioned organically */}
           <div className="flex justify-center lg:justify-start lg:ml-8 xl:ml-16">
             <div className="relative w-full max-w-xs sm:max-w-sm lg:max-w-md xl:max-w-lg">
-              <div className="relative w-full aspect-[3/2] sm:aspect-[3/2] lg:w-[350px] lg:h-[230px] xl:w-[420px] xl:h-[280px]">
+              <div className="relative w-full aspect-[3/2] sm:aspect-[3/2] lg:w-[350px] lg:h-[230px] xl:w-[480px] xl:h-full">
                 <img
                   src={photo}
                   alt="Elephant photo"
@@ -78,7 +78,7 @@ function App() {
             <div className="flex justify-center lg:justify-end">
               <div className="cursor-pointer" onClick={() => window.open('https://www.youtube.com/embed/49LiLYefg30?si=lS_yKP5QWNT9I59Z', '_blank')}>
                 <div className="relative w-full max-w-sm sm:max-w-md lg:max-w-lg xl:max-w-xl">
-                  <div className="relative w-full aspect-[3/2] sm:aspect-[3/2] lg:w-[400px] lg:h-full xl:w-[500px] xl:h-full flex items-center justify-center">
+                  <div className="relative w-full aspect-[3/2] sm:aspect-[3/2] lg:w-[400px] lg:h-full xl:w-[480px] xl:h-full flex items-center justify-center">
                     <img
                       src={frame2}
                       alt="Ornate Frame"
@@ -272,7 +272,7 @@ function App() {
       </div>
 
       {/* Navigation menu - responsive positioning */}
-      <div className="fixed z-20 bottom-32 right-4 sm:bottom-32 sm:right-6 lg:right-8 lg:top-1/2 lg:transform lg:-translate-y-1/2">
+      <div className="fixed z-20 bottom-4 right-4 sm:bottom-32 sm:right-6 lg:right-8 lg:top-1/2 lg:transform lg:-translate-y-1/2">
         <nav className="space-y-2 sm:space-y-4 lg:space-y-6">
           <button
             onClick={() => setCurrentSection('theatre')}
