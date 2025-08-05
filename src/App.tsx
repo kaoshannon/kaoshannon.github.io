@@ -1,19 +1,16 @@
 import React, { useState } from 'react';
 import { Routes, Route, useNavigate } from 'react-router-dom';
-import Theatre from './components/Theatre';
+import Theatre from './pages/Theatre';
 import logo from './assets/icons/logo.svg';
 import frame1 from './assets/images/frame-1.webp';
 import frame2 from './assets/images/frame-2.png';
 import frameCircle from './assets/images/frame-circular.png';
-import frameSquare1 from './assets/images/frame-square-1.png';
-import frameSquare2 from './assets/images/frame-square-2.png';
-import frameSquare3 from './assets/images/frame-square-3.png';
 import bench from './assets/images/bench.png';
 import photo from './assets/photos/IMG_8173.jpg';
-import instagram from './assets/icons/instagram.webp';
-import linkedin from './assets/icons/linkedin.png';
-import gmail from './assets/icons/gmail.png';
-import substack from './assets/icons/substack.png';
+import canvas from './assets/images/canvas.png';
+import Writeup from './components/Writeup';
+import SocialMediaFrames from './components/SocialMediaFrames';
+import NavigationMenu from './components/NavigationMenu';
 
 function Gallery() {
   const [currentSection, setCurrentSection] = useState('gallery');
@@ -57,15 +54,15 @@ function Gallery() {
 
         {/* Main frames section - organic layout */}
         <div className="mt-16 sm:mt-20 lg:mt-24 relative">
-
           {/* Main large artwork frame - positioned organically */}
           <div className="flex justify-center lg:justify-start lg:ml-8 xl:ml-16">
-            <div className="relative w-full max-w-xs sm:max-w-sm lg:max-w-md xl:max-w-lg">
-              <div className="relative w-full aspect-[3/2] sm:aspect-[3/2] lg:w-[350px] lg:h-[230px] xl:w-[480px] xl:h-full">
+            <div className="relative w-full max-w-[276px] sm:max-w-[345px] lg:max-w-[276px] xl:max-w-[552px]">
+              <div className="relative w-full aspect-[3/2] sm:aspect-[3/2] lg:w-[402.5px] lg:h-[264.5px] xl:w-[552px] xl:h-full flex items-center justify-center">
                 <img
                   src={photo}
                   alt="Elephant photo"
-                  className="absolute w-full h-full object-contain z-0"
+                  className="relative max-w-full max-h-full object-contain z-0"
+                  style={{ aspectRatio: '3/2', width: '100%', height: 'auto' }}
                 />
                 <img
                   src={frame1}
@@ -76,8 +73,19 @@ function Gallery() {
             </div>
           </div>
 
+          <div>
+            {/* Mobile: stack under elephant image */}
+            <div className="block lg:hidden mt-20 mb-24 flex justify-center">
+              <Writeup />
+            </div>
+            {/* Desktop: absolute organic position */}
+            <div className="hidden lg:block absolute bottom-0 mb-20 left-[600px] top-[100px] z-30">
+              <Writeup />
+            </div>
+          </div>
+
           {/* YouTube video frame - offset from main frame */}
-          <div className="mt-8 sm:mt-12 lg:mt-0 lg:absolute lg:top-16 lg:right-48 xl:top-20 xl:right-60">
+          <div className="hidden lg:block mt-8 sm:mt-12 lg:mt-0 lg:absolute lg:top-16 lg:right-48 xl:top-20 xl:right-60">
             <div className="flex justify-center lg:justify-end">
               <div className="cursor-pointer" onClick={() => window.open('https://www.youtube.com/embed/49LiLYefg30?si=lS_yKP5QWNT9I59Z', '_blank')}>
                 <div className="relative w-full max-w-sm sm:max-w-md lg:max-w-lg xl:max-w-xl">
@@ -106,196 +114,9 @@ function Gallery() {
           </div>
         </div>
 
-        {/* Social media frames - organic positioning */}
-        <div className="mt-12 sm:mt-16 lg:mt-12 xl:mt-0 relative">
-          {/* Mobile: Grid layout */}
-          <div className="lg:hidden flex justify-center">
-            <div className="grid grid-cols-2 gap-4 sm:gap-6 max-w-xs sm:max-w-sm">
-              {/* Email frame */}
-              <div className="cursor-pointer flex justify-center" onClick={() => window.open('mailto:hello@kaoshannon.com', '_blank')}>
-                <div className="relative w-16 h-16 sm:w-20 sm:h-20">
-                  <img
-                    src={frameSquare1}
-                    alt="Square Frame"
-                    className="w-full h-full z-10 relative"
-                    style={{ pointerEvents: 'none' }}
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center z-0" style={{ top: '20%', left: '20%', right: '20%', bottom: '20%' }}>
-                    <div className="w-full h-full bg-gray-700 flex items-center justify-center">
-                      <img src={gmail} alt="Gmail" className="w-3/4 h-3/4 object-contain" />
-                    </div>
-                  </div>
-                </div>
-              </div>
+        <SocialMediaFrames />
 
-              {/* Substack frame */}
-              <div className="cursor-pointer flex justify-center" onClick={() => window.open('https://substack.com/@kaoshannon', '_blank')}>
-                <div className="relative w-16 h-16 sm:w-20 sm:h-20">
-                  <img
-                    src={frameSquare2}
-                    alt="Square Frame"
-                    className="w-full h-full z-0 relative"
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center" style={{ top: '20%', left: '20%', right: '20%', bottom: '20%' }}>
-                    <div className="w-full h-full bg-green-800 flex items-center justify-center">
-                      <img src={substack} alt="substack" className="w-full h-full object-contain" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* LinkedIn frame */}
-              <div className="cursor-pointer flex justify-center" onClick={() => window.open('https://linkedin.com/in/kaoshannon', '_blank')}>
-                <div className="relative w-16 h-16 sm:w-20 sm:h-20">
-                  <img
-                    src={frameSquare3}
-                    alt="Small Frame"
-                    className="w-full h-full relative z-10"
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center z-0" style={{ top: '20%', left: '20%', right: '20%', bottom: '20%' }}>
-                    <img
-                      src={linkedin}
-                      alt="LinkedIn"
-                      className="w-full h-full object-contain"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              {/* Instagram frame */}
-              <div className="cursor-pointer flex justify-center" onClick={() => window.open('https://instagram.com/shannon.kao', '_blank')}>
-                <div className="relative w-16 h-16 sm:w-20 sm:h-20">
-                  <img
-                    src={frameSquare1}
-                    alt="Square Frame"
-                    className="w-full h-full relative z-10"
-                  />
-                  <div
-                    className="absolute inset-0 flex items-center justify-center z-0"
-                    style={{
-                      top: '20%',
-                      left: '20%',
-                      right: '20%',
-                      bottom: '20%',
-                      backgroundColor: '#14532d',
-                    }}
-                  >
-                    <img
-                      src={instagram}
-                      alt="Instagram"
-                      className="w-full h-full object-contain"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Desktop: Organic positioning */}
-          <div className="hidden lg:block relative" style={{ height: '100px' }}>
-            {/* Email frame - top left area */}
-            <div className="absolute cursor-pointer" style={{ top: '-80%', left: '40%' }} onClick={() => window.open('mailto:hello@kaoshannon.com', '_blank')}>
-              <div className="relative w-20 h-20 xl:w-24 xl:h-24">
-                <div className="absolute inset-0 flex items-center justify-center z-0" style={{ top: '20%', left: '20%', right: '20%', bottom: '20%' }}>
-                  <div className="w-full h-full bg-gray-700 flex items-center justify-center">
-                    <img src={gmail} alt="Gmail" className="w-3/4 h-3/4 object-contain" />
-                  </div>
-                </div>
-                <img
-                  src={frameSquare1}
-                  alt="Square Frame"
-                  className="w-full h-full z-10 relative"
-                  style={{ pointerEvents: 'none' }}
-                />
-              </div>
-            </div>
-
-            {/* Substack frame - top right area */}
-            <div className="absolute cursor-pointer" style={{ top: '24%', left: '40%' }} onClick={() => window.open('https://substack.com/@kaoshannon', '_blank')}>
-              <div className="relative w-20 h-20 xl:w-24 xl:h-24">
-                <img
-                  src={frameSquare2}
-                  alt="Square Frame"
-                  className="w-full h-full"
-                />
-                <div className="absolute inset-0 flex items-center justify-center" style={{ top: '20%', left: '20%', right: '20%', bottom: '20%' }}>
-                  <div className="w-full h-full flex items-center justify-center">
-                    <img src={substack} alt="substack" className="w-full h-full object-contain" />
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* LinkedIn frame - bottom left area */}
-            <div className="absolute cursor-pointer" style={{ top: '-20%', left: '35%' }} onClick={() => window.open('https://linkedin.com/in/kaoshannon', '_blank')}>
-              <div className="relative w-20 h-20 xl:w-24 xl:h-24">
-                <div className="absolute inset-0 flex items-center justify-center z-0" style={{ top: '20%', left: '20%', right: '20%', bottom: '20%' }}>
-                  <img
-                    src={linkedin}
-                    alt="LinkedIn"
-                    className="w-full h-full object-contain"
-                  />
-                </div>
-                <img
-                  src={frameSquare3}
-                  alt="Small Frame"
-                  className="w-full h-full relative z-10"
-                />
-              </div>
-            </div>
-
-            {/* Instagram frame - bottom right area */}
-            <div className="absolute cursor-pointer" style={{ top: '70%', left: '30%' }} onClick={() => window.open('https://instagram.com/shannon.kao', '_blank')}>
-              <div className="relative w-20 h-20 xl:w-24 xl:h-24">
-                <img
-                  src={frameSquare1}
-                  alt="Square Frame"
-                  className="w-full h-full relative z-10"
-                />
-                <div
-                  className="absolute inset-0 flex items-center justify-center z-0"
-                  style={{
-                    top: '20%',
-                    left: '20%',
-                    right: '20%',
-                    bottom: '20%',
-                    backgroundColor: '#14532d',
-                  }}
-                >
-                  <img
-                    src={instagram}
-                    alt="Instagram"
-                    className="w-full h-full object-contain"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Navigation menu - responsive positioning */}
-      <div className="fixed z-20 bottom-4 right-4 sm:bottom-32 sm:right-6 lg:right-8 lg:top-1/2 lg:transform lg:-translate-y-1/2">
-        <nav className="space-y-2 sm:space-y-4 lg:space-y-6">
-          <button
-            onClick={() => navigate('/theatre')}
-            className="block text-right font-serif italic text-sm sm:text-base lg:text-lg text-white hover:text-yellow-200 transition-colors"
-          >
-            theatre →
-          </button>
-          <button
-            onClick={() => setCurrentSection('listening')}
-            className="block text-right font-serif italic text-sm sm:text-base lg:text-lg text-white hover:text-yellow-200 transition-colors"
-          >
-            listening room →
-          </button>
-          <button
-            onClick={() => setCurrentSection('writers')}
-            className="block text-right font-serif italic text-sm sm:text-base lg:text-lg text-white hover:text-yellow-200 transition-colors"
-          >
-            writer's room →
-          </button>
-        </nav>
+        <NavigationMenu />
       </div>
 
       {/* Section overlays */}
