@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Routes, Route, useNavigate } from 'react-router-dom';
+import Theatre from './components/Theatre';
 import logo from './assets/icons/logo.svg';
 import frame1 from './assets/images/frame-1.webp';
 import frame2 from './assets/images/frame-2.png';
@@ -13,8 +15,9 @@ import linkedin from './assets/icons/linkedin.png';
 import gmail from './assets/icons/gmail.png';
 import substack from './assets/icons/substack.png';
 
-function App() {
+function Gallery() {
   const [currentSection, setCurrentSection] = useState('gallery');
+  const navigate = useNavigate();
 
   return (
     <div className="min-h-screen relative overflow-hidden">
@@ -275,7 +278,7 @@ function App() {
       <div className="fixed z-20 bottom-4 right-4 sm:bottom-32 sm:right-6 lg:right-8 lg:top-1/2 lg:transform lg:-translate-y-1/2">
         <nav className="space-y-2 sm:space-y-4 lg:space-y-6">
           <button
-            onClick={() => setCurrentSection('theatre')}
+            onClick={() => navigate('/theatre')}
             className="block text-right font-serif italic text-sm sm:text-base lg:text-lg text-white hover:text-yellow-200 transition-colors"
           >
             theatre →
@@ -298,6 +301,15 @@ function App() {
       {/* Section overlays */}
       {/* {renderSection()} */}
     </div>
+  );
+}
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Gallery />} />
+      <Route path="/theatre" element={<Theatre />} />
+    </Routes>
   );
 }
 
