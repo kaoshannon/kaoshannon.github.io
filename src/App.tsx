@@ -114,17 +114,17 @@ function Gallery() {
               {/* Email frame */}
               <div className="cursor-pointer flex justify-center" onClick={() => window.open('mailto:hello@kaoshannon.com', '_blank')}>
                 <div className="relative w-16 h-16 sm:w-20 sm:h-20">
-                  <div className="absolute inset-0 flex items-center justify-center z-0" style={{ top: '20%', left: '20%', right: '20%', bottom: '20%' }}>
-                    <div className="w-full h-full bg-gray-700 flex items-center justify-center">
-                      <img src={gmail} alt="Gmail" className="w-3/4 h-3/4 object-contain" />
-                    </div>
-                  </div>
                   <img
                     src={frameSquare1}
                     alt="Square Frame"
                     className="w-full h-full z-10 relative"
                     style={{ pointerEvents: 'none' }}
                   />
+                  <div className="absolute inset-0 flex items-center justify-center z-0" style={{ top: '20%', left: '20%', right: '20%', bottom: '20%' }}>
+                    <div className="w-full h-full bg-gray-700 flex items-center justify-center">
+                      <img src={gmail} alt="Gmail" className="w-3/4 h-3/4 object-contain" />
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -134,10 +134,10 @@ function Gallery() {
                   <img
                     src={frameSquare2}
                     alt="Square Frame"
-                    className="w-full h-full"
+                    className="w-full h-full z-0 relative"
                   />
                   <div className="absolute inset-0 flex items-center justify-center" style={{ top: '20%', left: '20%', right: '20%', bottom: '20%' }}>
-                    <div className="w-full h-full flex items-center justify-center">
+                    <div className="w-full h-full bg-green-800 flex items-center justify-center">
                       <img src={substack} alt="substack" className="w-full h-full object-contain" />
                     </div>
                   </div>
@@ -147,6 +147,11 @@ function Gallery() {
               {/* LinkedIn frame */}
               <div className="cursor-pointer flex justify-center" onClick={() => window.open('https://linkedin.com/in/kaoshannon', '_blank')}>
                 <div className="relative w-16 h-16 sm:w-20 sm:h-20">
+                  <img
+                    src={frameSquare3}
+                    alt="Small Frame"
+                    className="w-full h-full relative z-10"
+                  />
                   <div className="absolute inset-0 flex items-center justify-center z-0" style={{ top: '20%', left: '20%', right: '20%', bottom: '20%' }}>
                     <img
                       src={linkedin}
@@ -154,11 +159,6 @@ function Gallery() {
                       className="w-full h-full object-contain"
                     />
                   </div>
-                  <img
-                    src={frameSquare3}
-                    alt="Small Frame"
-                    className="w-full h-full relative z-10"
-                  />
                 </div>
               </div>
 
