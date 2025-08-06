@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Routes, Route, useNavigate } from 'react-router-dom';
 import Theatre from './pages/Theatre';
+import Portfolio from './pages/Portfolio';
 import logo from './assets/icons/logo.svg';
 import frame1 from './assets/images/frame-1.webp';
 import frame2 from './assets/images/frame-2.png';
@@ -129,6 +130,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Gallery />} />
+      <Route path="/portfolio" element={<Portfolio />} />
       <Route path="/theatre" element={<Theatre />} />
     </Routes>
   );
