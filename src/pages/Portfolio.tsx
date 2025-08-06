@@ -17,7 +17,7 @@ const sampleProjects: Project[] = [
     id: '1',
     name: 'the New Third Place',
     year: '2024',
-    description: 'A silly social experiment to reimagine third spaces. Read about our two-day quest to connect strangers in Vancouver.',
+    description: 'A silly social experiment to reimagine third places. Read about our two-day quest to connect strangers in Vancouver.',
     type: 'other',
     skills: ['Social Experiment', 'Community Building', 'Design Thinking'],
     link: 'https://thenewthirdplace.github.io/',
@@ -29,7 +29,7 @@ const sampleProjects: Project[] = [
     id: '2',
     name: 'Dear Hiring Manager...',
     year: '2023',
-    description: 'What if you never have to customized another cover letter? We\'re your one-stop shop for job applications. Let us pitch you to the hiring manager, so you can focus on doing what they\'re going to hire you for.',
+    description: 'What if you never have to customized another cover letter? DHM is your new one-stop shop for job applications. Let us pitch you to the hiring manager, so you can focus on doing what they\'re going to hire you for.',
     type: 'software',
     skills: ['Web Development', 'UI/UX Design', 'Product Management'],
     link: 'https://devpost.com/software/dear-hiring-manager',
@@ -56,7 +56,7 @@ const sampleProjects: Project[] = [
     id: '4',
     name: 'EY UniVRsity',
     year: '2022',
-    description: 'Virtual reality employee learning/training platform. Top Project of UBC BizTech and EY\'s product hackathon 2022.',
+    description: 'Virtual reality employee training and professional development platform. Top Project of UBC BizTech and EY\'s product hackathon 2022.',
     type: 'software',
     skills: ['VR Development', 'Product Management', 'UI/UX Design'],
     link: 'https://devpost.com/software/ey-univrsity',
@@ -69,7 +69,7 @@ const sampleProjects: Project[] = [
     id: '5',
     name: 'CryptoTune',
     year: '2022',
-    description: 'Data sonification with Covalent\'s Ethereum API. Awarded Data Analysis Sponsor Prize in nwHacks 2022 (hosted by nwPlus, sponsored by Covalent).',
+    description: 'Data sonification with Covalent\'s Ethereum API. Won Sponsor Prize in nwHacks 2022 (hosted by nwPlus, sponsored by Covalent).',
     type: 'software',
     skills: ['Data Sonification', 'Ethereum API', 'Audio Processing', 'Data Analysis'],
     link: 'https://www.youtube.com/embed/i8MvnZ33rTY',
@@ -82,9 +82,9 @@ const sampleProjects: Project[] = [
     id: '6',
     name: 'Understanding and Designing for Video-based Serious Leisure',
     year: '2022',
-    description: 'A Case Study of Musical Instrument Learning. Research project on video-based learning and serious leisure.',
+    description: 'A case study of musical instrument through video-based mediums. Co-authored with Dongwook Yoon, Mint Tanprasert, and Yixin Wang under supervision by Dongwook Yoon',
     type: 'other',
-    skills: ['Research', 'User Research', 'Design Research', 'Academic Writing'],
+    skills: ['Human-Computer Interface', 'Research Design', 'Qualitative Thematic Analysis', 'Academic Writing'],
     images: [
       frameCircular,
       frameSquare3
@@ -94,7 +94,7 @@ const sampleProjects: Project[] = [
     id: '7',
     name: 'BYO',
     year: '2022',
-    description: 'UI/UX design and user testing for a mobile application focused on sustainability and user engagement.',
+    description: 'Cafe rewards platform to incentivize bring-your-own cup culture in Greater Vancouver.',
     type: 'design',
     skills: ['UI/UX Design', 'User Testing', 'Mobile Design', 'Incentive Systems Design'],
     images: [
@@ -107,9 +107,9 @@ const sampleProjects: Project[] = [
     id: '8',
     name: 'CanadaToGo/VanBCToGo',
     year: '2022',
-    description: 'Frontend development and live capacity tracking with Google Maps API. Real-time tracking and mapping application.',
+    description: 'Helping local restaurants operate during COVID-19 lockdowns with live capacity tracking.',
     type: 'software',
-    skills: ['Frontend Development', 'Google Maps API', 'Real-time Tracking', 'Web Development'],
+    skills: ['Frontend Development', 'Google Maps API', 'Web Development'],
     images: [
       frame2,
       frame3
@@ -122,6 +122,7 @@ const sampleProjects: Project[] = [
     description: 'Aqualogix transforms the problem of GPU cooling in data centers into an opportunity for carbon-free water heating in buildings. Our modular system captures waste heat from high-performance computing and redirects it to domestic hot water loops, reducing cooling costs for compute providers and heating costs for commercial properties.',
     type: 'other',
     skills: [],
+    link: 'aqualogix.ca',
     images: [
       frame2,
       frame3
@@ -131,7 +132,7 @@ const sampleProjects: Project[] = [
     id: '10',
     name: 'The Guy App',
     year: '2025',
-    description: 'Ever heard the phrase, \'I know a guy\'? The Guy App connects you to trustworthy referrals - like mechanics, tutors or designers - through your personal network. Now you can find \'your guy\' with confidence.',
+    description: 'Ever heard the phrase, \'I know a guy\'? The Guy App connects you to trustworthy referrals - like mechanics, tutors, or anyone else you might need in a pinch - all through your personal network. Now you can find \'your guy\' with confidence.',
     type: 'software',
     skills: [],
     link: 'https://devpost.com/software/guy-app',
@@ -209,7 +210,7 @@ const Portfolio: React.FC = () => {
             </button>
           </div>
           <h1 className="text-3xl font-bold text-gray-900 mb-2">Portfolio</h1>
-          <p className="text-gray-600">A collection of my projects and work</p>
+          <p className="text-gray-600">Building and breaking stuff – mostly in code, sometimes other stuff as well</p>
         </div>
       </div>
 
