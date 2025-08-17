@@ -1,146 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
-import ProjectCard, { Project } from '../components/ProjectCard';
-import frame1 from '../assets/images/frame-1.webp';
-import frame2 from '../assets/images/frame-2.png';
-import frame3 from '../assets/images/frame-3.png';
-import frameCircular from '../assets/images/frame-circular.png';
-import frameSquare1 from '../assets/images/frame-square-1.png';
-import frameSquare2 from '../assets/images/frame-square-2.png';
-import frameSquare3 from '../assets/images/frame-square-3.png';
-
-import tntp from '../assets/portfolio/thenewthirdplace/walk.png';
-import guy from '../assets/portfolio/theguyapp/logo.svg';
-
-const sampleProjects: Project[] = [
-  {
-    id: '1',
-    name: 'the New Third Place',
-    year: '2024',
-    description: 'A silly social experiment to reimagine third places. Read about our two-day quest to connect strangers in Vancouver.',
-    type: 'other',
-    skills: ['Social Experiment', 'Community Building', 'Design Thinking'],
-    link: 'https://thenewthirdplace.github.io/',
-    images: [
-      tntp
-    ]
-  },
-  {
-    id: '2',
-    name: 'Dear Hiring Manager...',
-    year: '2023',
-    description: 'What if you never have to customized another cover letter? DHM is your new one-stop shop for job applications. Let us pitch you to the hiring manager, so you can focus on doing what they\'re going to hire you for.',
-    type: 'software',
-    skills: ['Web Development', 'UI/UX Design', 'Product Management'],
-    link: 'https://devpost.com/software/dear-hiring-manager',
-    images: [
-      frameSquare1,
-      frameSquare2,
-      frameSquare3
-    ]
-  },
-  {
-    id: '3',
-    name: 'UBC BizTech',
-    year: '2023',
-    description: 'Member and event registration web application for UBC BizTech.',
-    type: 'software',
-    skills: ['Web Development', 'User Registration', 'Event Management'],
-    link: 'https://app.ubcbiztech.com/signup',
-    images: [
-      frameCircular,
-      frameSquare1
-    ]
-  },
-  {
-    id: '4',
-    name: 'EY UniVRsity',
-    year: '2022',
-    description: 'Virtual reality employee training and professional development platform. Top Project of UBC BizTech and EY\'s product hackathon 2022.',
-    type: 'software',
-    skills: ['VR Development', 'Product Management', 'UI/UX Design'],
-    link: 'https://devpost.com/software/ey-univrsity',
-    images: [
-      frame2,
-      frame3
-    ]
-  },
-  {
-    id: '5',
-    name: 'CryptoTune',
-    year: '2022',
-    description: 'Data sonification with Covalent\'s Ethereum API. Won Sponsor Prize in nwHacks 2022 (hosted by nwPlus, sponsored by Covalent).',
-    type: 'software',
-    skills: ['Data Sonification', 'Ethereum API', 'Audio Processing', 'Data Analysis'],
-    link: 'https://www.youtube.com/embed/i8MvnZ33rTY',
-    images: [
-      frameSquare1,
-      frameSquare2
-    ]
-  },
-  {
-    id: '6',
-    name: 'Understanding and Designing for Video-based Serious Leisure',
-    year: '2022',
-    description: 'A case study of musical instrument through video-based mediums. Co-authored with Dongwook Yoon, Mint Tanprasert, and Yixin Wang under supervision by Dongwook Yoon',
-    type: 'other',
-    skills: ['Human-Computer Interface', 'Research Design', 'Qualitative Thematic Analysis', 'Academic Writing'],
-    images: [
-      frameCircular,
-      frameSquare3
-    ]
-  },
-  {
-    id: '7',
-    name: 'BYO',
-    year: '2022',
-    description: 'Cafe rewards platform to incentivize bring-your-own cup culture in Greater Vancouver.',
-    type: 'design',
-    skills: ['UI/UX Design', 'User Testing', 'Mobile Design', 'Incentive Systems Design'],
-    images: [
-      frameSquare1,
-      frameSquare2,
-      frameSquare3
-    ]
-  },
-  {
-    id: '8',
-    name: 'CanadaToGo/VanBCToGo',
-    year: '2022',
-    description: 'Helping local restaurants operate during COVID-19 lockdowns with live capacity tracking.',
-    type: 'software',
-    skills: ['Frontend Development', 'Google Maps API', 'Web Development'],
-    images: [
-      frame2,
-      frame3
-    ]
-  },
-  {
-    id: '9',
-    name: 'Aqualogix',
-    year: '2024 - 2025',
-    description: 'Aqualogix transforms the problem of GPU cooling in data centers into an opportunity for carbon-free water heating in buildings. Our modular system captures waste heat from high-performance computing and redirects it to domestic hot water loops, reducing cooling costs for compute providers and heating costs for commercial properties.',
-    type: 'other',
-    skills: [],
-    link: 'aqualogix.ca',
-    images: [
-      frame2,
-      frame3
-    ]
-  },
-  {
-    id: '10',
-    name: 'The Guy App',
-    year: '2025',
-    description: 'Ever heard the phrase, \'I know a guy\'? The Guy App connects you to trustworthy referrals - like mechanics, tutors, or anyone else you might need in a pinch - all through your personal network. Now you can find \'your guy\' with confidence.',
-    type: 'software',
-    skills: [],
-    link: 'https://devpost.com/software/guy-app',
-    images: [
-      guy
-    ]
-  }
-];
+import ProjectCard from '../components/ProjectCard';
+import sampleProjects from '../components/PortfolioProjects'
 
 const Portfolio: React.FC = () => {
   const navigate = useNavigate();
@@ -206,11 +67,11 @@ const Portfolio: React.FC = () => {
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
-              <span className="text-sm font-medium">Back</span>
+              <span className="text-sm font-medium">Back to main gallery</span>
             </button>
           </div>
           <h1 className="text-3xl font-bold text-gray-900 mb-2">Portfolio</h1>
-          <p className="text-gray-600">Building and breaking stuff – mostly in code, sometimes other stuff as well</p>
+          <p className="text-gray-600">Building and breaking – mostly code, sometimes other stuff as well</p>
         </div>
       </div>
 
@@ -313,7 +174,7 @@ const Portfolio: React.FC = () => {
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredProjects.map(project => (
-              <ProjectCard key={project.id} project={project} />
+              <ProjectCard project={project} />
             ))}
           </div>
         )}

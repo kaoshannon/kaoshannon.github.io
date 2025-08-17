@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 
 export interface Project {
-  id: string;
   name: string;
   year: string;
   description: string;
-  type: 'software' | 'design' | 'other';
+  type: 'software' | 'design' | 'research' | 'other';
   skills: string[];
   link?: string;
   images?: string[];
@@ -40,6 +39,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         return 'bg-blue-100 text-blue-800 border-blue-200';
       case 'design':
         return 'bg-purple-100 text-purple-800 border-purple-200';
+      case 'research':
+        return 'bg-green-100 text-green-800 border-green-200';
       default:
         return 'bg-gray-100 text-gray-800 border-gray-200';
     }
