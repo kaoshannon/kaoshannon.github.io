@@ -1,10 +1,9 @@
 import React from 'react';
-import canvasImage from '../assets/images/canvas.png';
 
 const Writeup: React.FC = () => {
     return (
         <div>
-            <h2 className="text-md lg:text-md font-sans font-bold mb-1 text-gray-200 italic">
+            <h2 className="text-md lg:text-md font-sans font-bold mb-8 text-gray-200 italic">
                 Shannon Kao
             </h2>
             <p className="text-sm font-sans text-gray-200 leading-tight">
