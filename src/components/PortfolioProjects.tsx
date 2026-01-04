@@ -149,19 +149,25 @@ const sampleProjects: Project[] = [
     link: "https://medium.com/@kaoshannon/concrete-jungle-where-data-dreams-are-made-of-d0675afa9e9e",
     images: [concretejungle],
   },
-];
-
-const archivedProjects: Project[] = [
   {
     name: "UBC BizTech",
     year: "2023",
     description:
-      "Member management and event registration web application for UBC BizTech.",
+      "Member registration and event managerment web application for UBC BizTech.",
     type: "software",
-    skills: ["Web Development", "User Registration", "Event Management"],
+    skills: [
+      "Full Stack Development",
+      "User Authentication",
+      "React",
+      "AWS",
+      "Serverless",
+    ],
     link: "https://app.ubcbiztech.com/signup",
     images: [biztechLogo, eventRegistration],
   },
+];
+
+const archivedProjects: Project[] = [
   {
     name: "EY UniVRsity",
     year: "2022",
