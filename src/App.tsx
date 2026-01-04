@@ -107,7 +107,7 @@ function Gallery() {
                 <div className="lg:relative lg:left-[80%] xl:left-[100%]">
                   <SocialMediaFrame
                     platform="substack"
-                    url="https://poppp.substack.com/"
+                    url="https://substack.com/@kaoshannon"
                     frameImage={frameSquare3}
                     iconImage={substack}
                   />

@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 export interface Project {
   name: string;
   year: string;
   description: string;
-  type: 'software' | 'design' | 'research' | 'other';
+  type: "software" | "design" | "research" | "machine learning" | "other";
   skills: string[];
   link?: string;
   images?: string[];
@@ -35,14 +35,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 
   const getTypeColor = (type: string) => {
     switch (type) {
-      case 'software':
-        return 'bg-blue-100 text-blue-800 border-blue-200';
-      case 'design':
-        return 'bg-purple-100 text-purple-800 border-purple-200';
-      case 'research':
-        return 'bg-green-100 text-green-800 border-green-200';
+      case "software":
+        return "bg-blue-100 text-blue-800 border-blue-200";
+      case "design":
+        return "bg-purple-100 text-purple-800 border-purple-200";
+      case "research":
+        return "bg-green-100 text-green-800 border-green-200";
       default:
-        return 'bg-gray-100 text-gray-800 border-gray-200';
+        return "bg-gray-100 text-gray-800 border-gray-200";
     }
   };
 
@@ -79,10 +79,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                   <button
                     key={index}
                     onClick={() => setCurrentImageIndex(index)}
-                    className={`w-2 h-2 rounded-full transition-all ${index === currentImageIndex
-                      ? 'bg-white'
-                      : 'bg-white bg-opacity-50'
-                      }`}
+                    className={`w-2 h-2 rounded-full transition-all ${
+                      index === currentImageIndex
+                        ? "bg-white"
+                        : "bg-white bg-opacity-50"
+                    }`}
                   />
                 ))}
               </div>
@@ -101,7 +102,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             </h3>
             <p className="text-sm text-gray-500">{project.year}</p>
           </div>
-          <span className={`px-3 py-1 text-xs font-medium rounded-full border ${getTypeColor(project.type)}`}>
+          <span
+            className={`px-3 py-1 text-xs font-medium rounded-full border ${getTypeColor(
+              project.type
+            )}`}
+          >
             {project.type}
           </span>
         </div>
@@ -131,7 +136,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             rel="noopener noreferrer"
             className="inline-flex items-center text-sm text-emerald-700 hover:text-emerald-900 font-medium transition-colors"
           >
-            {project.link.includes('youtube.com') ? 'Watch Video →' : 'View Project →'}
+            {project.link.includes("youtube.com")
+              ? "Watch Video →"
+              : "View Project →"}
           </a>
         )}
       </div>
@@ -139,4 +146,4 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   );
 };
 
-export default ProjectCard; 
+export default ProjectCard;
