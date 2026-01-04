@@ -18,8 +18,13 @@ const Portfolio: React.FC = () => {
 
   const skills = useMemo(() => {
     const allSkills = sampleProjects.flatMap((project) => project.skills);
-    const uniqueSkills = [...new Set(allSkills)];
-    return uniqueSkills.sort();
+    const counts: Record<string, number> = {};
+    allSkills.forEach((s) => {
+      counts[s] = (counts[s] || 0) + 1;
+    });
+    // Keep only skills that appear in at least two projects
+    const filtered = Object.keys(counts).filter((k) => counts[k] >= 2);
+    return filtered.sort();
   }, []);
 
   // Filter projects based on selected filters
