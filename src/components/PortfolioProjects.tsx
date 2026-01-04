@@ -7,8 +7,6 @@ import guyHero from "../assets/portfolio/theguyapp/GuyHero.png";
 import canadatogoMockup from "../assets/portfolio/canadatogo/CanadaToGoMockups.png";
 import byoMockup from "../assets/portfolio/byo/BYOMockups.png";
 import dhmHero from "../assets/portfolio/dearhiringmanager/dhmHero.png";
-import dhmCopyPaste from "../assets/portfolio/dearhiringmanager/1-copy-and-paste.png";
-import dhmGenerate from "../assets/portfolio/dearhiringmanager/3-generate-cover-letter.png";
 import getScrollyHero from "../assets/portfolio/getscrolly/get-scrolly-hero.png";
 import getScrollySalesByType from "../assets/portfolio/getscrolly/get-scrolly-sales-by-type.png";
 import getScrollySalesOverTime from "../assets/portfolio/getscrolly/get-scrolly-yr-by-yr.png";
@@ -20,7 +18,6 @@ import accessories from "../assets/portfolio/perfectinformation/perfectinfo-acce
 import EYUniDecentraland from "../assets/portfolio/eyuni/EYUniVRsity_Decentraland.png";
 import EYUniClassroom from "../assets/portfolio/eyuni/EYUniVRsity_Classroom.png";
 import biztechLogo from "../assets/portfolio/biztechwebapp/biztech-logo.png";
-import eventRegistration from "../assets/portfolio/biztechwebapp/BTWA.png";
 
 const sampleProjects: Project[] = [
   {
@@ -97,7 +94,7 @@ const sampleProjects: Project[] = [
     type: "software",
     skills: ["Web Development", "UI/UX Design", "Product Management"],
     link: "https://devpost.com/software/dear-hiring-manager",
-    images: [dhmHero, dhmCopyPaste, dhmGenerate],
+    images: [dhmHero],
   },
   {
     name: "Get Scrolly",
@@ -163,7 +160,7 @@ const sampleProjects: Project[] = [
       "Serverless",
     ],
     link: "https://app.ubcbiztech.com/signup",
-    images: [biztechLogo, eventRegistration],
+    images: [biztechLogo],
   },
 ];
 
